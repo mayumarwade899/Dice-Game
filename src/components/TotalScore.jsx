@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 
 const TotalScore = ({score}) => {
@@ -18,8 +19,6 @@ const ScoreContainer = styled.div`
     h1 {
         font-size: 100px;
         line-height: 0px;
-        margin-top: 50px;
-        margin-bottom: 50px;
     }
 
     p {

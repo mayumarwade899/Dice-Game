@@ -2,18 +2,28 @@
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
 
-function NumberSelector({selectedNumber, setSelectedNumber}) {
+function NumberSelector({
+  setError,
+  error,
+  selectedNumber,
+  setSelectedNumber,
+}) {
   const arrayNums = [1, 2, 3, 4, 5, 6];
-  
+
+  const numberSelectorHandler = (value) => {
+    setSelectedNumber(value);
+    setError("");
+  };
 
   return (
     <NumberSelectorContainer>
+      <p className="error">{error}</p>
       <div className="flex">
         {arrayNums.map((value, i) => (
           <Box
             isSelected={value === selectedNumber}
             key={i}
-            onClick={() => setSelectedNumber(value)}
+            onClick={() => numberSelectorHandler(value)}
           >
             {value}
           </Box>
@@ -39,6 +49,10 @@ const NumberSelectorContainer = styled.div`
   p {
     font-size: 24px;
     font-weight: bolder;
+  }
+
+  .error {
+    color: red;
   }
 `;
 

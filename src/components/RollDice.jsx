@@ -19,14 +19,14 @@ const DiceContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 
   .dice {
     cursor: pointer;
   }
 
   img {
-    width: 170px;
+    width: 200px;
   }
 
   p {
