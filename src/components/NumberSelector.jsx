@@ -1,10 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
 import styled from "styled-components";
 
-function NumberSelector() {
+function NumberSelector({selectedNumber, setSelectedNumber}) {
   const arrayNums = [1, 2, 3, 4, 5, 6];
-  const [selectedNumber, setSelectedNumber] = useState();
+  
 
   return (
     <NumberSelectorContainer>
